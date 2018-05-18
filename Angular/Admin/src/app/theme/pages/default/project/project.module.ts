@@ -6,19 +6,27 @@ import { ProjectComponent } from './project.component';
 import { DefaultComponent } from '../default.component';
 import { LayoutModule } from '../../../layouts/layout.module';
 import { ProjectCreateComponent } from './project-create/project-create.component';
-import { FileUploadModule, DropdownModule } from 'primeng/primeng';
-
+import { FileUploadModule, DropdownModule, EditorModule } from 'primeng/primeng';
+import { ProjectListComponent } from './project-list/project-list.component';
+import { GrowlModule } from 'primeng/primeng';
+import { ConfirmDialogModule } from 'primeng/primeng';
+import { DataTableModule } from 'primeng/primeng';
+import { ProjectEditComponent } from './project-edit/project-edit.component';
 const routes: Routes = [
     {
-        'path': '',
-        'component': DefaultComponent,
-        'children': [
+        path: "",
+        component: DefaultComponent,
+        children: [
             {
-                'path': '',
-                'component': ProjectComponent,
-            },
-        ],
-    },
+                path: "",
+                component: ProjectComponent,
+                children: [
+                    { path: 'add', component:  ProjectCreateComponent },
+                    { path: 'list', component: ProjectListComponent },
+                ]
+            }
+        ]
+    }
 ];
 
 @NgModule({
@@ -29,10 +37,14 @@ const routes: Routes = [
         RouterModule.forChild(routes),
         LayoutModule,
         FileUploadModule,
-        DropdownModule
+        DropdownModule,
+        GrowlModule,
+        ConfirmDialogModule,
+        DataTableModule,
+        EditorModule
     ],
     declarations: [
-        ProjectComponent,
+        ProjectComponent, ProjectListComponent, ProjectCreateComponent , ProjectEditComponent
     ]
 })
 

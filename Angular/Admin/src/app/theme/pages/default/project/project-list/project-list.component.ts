@@ -12,7 +12,7 @@ import { ConfirmationService } from 'primeng/primeng';
     ]
 })
 export class ProjectListComponent implements OnInit, AfterViewInit{
-
+    public msgs: Message[];
     public projectCategoryModel: CreateProjectCategory = {
         name: ''
     }

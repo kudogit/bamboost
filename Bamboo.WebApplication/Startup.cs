@@ -87,6 +87,10 @@ namespace Bamboo.WebApplication
 
             app.UseSignalRService();
 
+            app.UseDefaultFiles();
+
+            app.UseStaticFiles();
+
             app.UseMvc();
             
         }

@@ -26,7 +26,8 @@ import {
     TabViewModule,
     DialogModule,
     DropdownModule,
-    FileUploadModule
+    FileUploadModule,
+    DataTableModule
 } from 'primeng/primeng';
 
 const routes: Routes = [
@@ -55,7 +56,8 @@ const routes: Routes = [
         LayoutModule,
         //primeng Modules
         DropdownModule,
-        FileUploadModule
+        FileUploadModule,
+        DataTableModule
     ],
     declarations: [
         ProductComponent,

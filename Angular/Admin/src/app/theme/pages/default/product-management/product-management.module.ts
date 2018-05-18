@@ -61,8 +61,6 @@ const routes: Routes = [
     ],
     declarations: [
         ProductManagementComponent,
-        ProjectCreateComponent,
-        ProjectEditComponent
     ],
     providers: [
         HttpClient,

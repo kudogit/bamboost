@@ -42,7 +42,7 @@
                         <div class="form-group m-form__group row align-items-center">
                             <div class="col-md-12">
                                 <div class="m-input-icon m-input-icon--left">
-                                    <input type="text" class="form-control m-input m-input--solid" placeholder="Search..." [(ngModel)]="filter">
+                                    <input type="text" class="form-control m-input m-input--solid" placeholder="Search...">
                                     <span class="m-input-icon__icon m-input-icon__icon--left">
                                         <span>
                                             <i class="la la-search"></i>
@@ -109,7 +109,7 @@
                                 </span>
                             </td>
                         </tr>
-                        <tr class="m-datatable__row" *ngFor="let item of projectCategories | filter:filter">
+                        <tr class="m-datatable__row" *ngFor="let item of projectCategories">
                             <!-- <td class="m-datatable__cell--center m-datatable__cell m-datatable__cell--check">
                                 <span>
                                     <label class="m-checkbox m-checkbox--single m-checkbox--solid m-checkbox--brand">

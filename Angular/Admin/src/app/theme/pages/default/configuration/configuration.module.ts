@@ -11,17 +11,22 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { EditorModule } from 'primeng/primeng';
 import { GrowlModule } from 'primeng/primeng';
 import { MessageService } from 'primeng/components/common/messageservice';
+import { ConfigurationDisplayComponent } from './configuration-display/configuration-display.component';
 const routes: Routes = [
     {
-        'path': '',
-        'component': DefaultComponent,
-        'children': [
+        path: "",
+        component: DefaultComponent,
+        children: [
             {
-                'path': '',
-                'component': ConfigurationComponent,
-            },
-        ],
-    },
+                path: "",
+                component: ConfigurationComponent,
+                children: [
+                    { path: 'add', component: ConfigurationDisplayComponent },
+                   
+                ]
+            }
+        ]
+    }
 ];
 
 @NgModule({

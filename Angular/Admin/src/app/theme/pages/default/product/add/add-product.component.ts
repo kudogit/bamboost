@@ -48,7 +48,7 @@ export class NewProductComponent implements OnInit, AfterViewInit {
         this.msgs.push({ severity: 'info', summary: 'File Uploaded', detail: '' });
     }
 
-    private checkValid(): boolean {
+    public checkValid(): boolean {
         if (this.productForm.get('categoryId').status == "VALID"
             && !this.productForm.get('categoryId').pristine) {
             return true;

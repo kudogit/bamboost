@@ -47,10 +47,6 @@ const routes: Routes = [
                 "loadChildren": ".\/pages\/default\/project\/project.module#ProjectModule"
             },
             {
-                "path": "project/category/list",
-                "loadChildren": ".\/pages\/default\/project\/project-list\/project-list.module#ProjectListModule"
-            },
-            {
                 "path": "quan-ly-san-pham",
                 "loadChildren": ".\/pages\/default\/product-management\/product-management.module#ProductManagementModule"
             },

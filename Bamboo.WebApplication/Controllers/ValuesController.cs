@@ -12,7 +12,7 @@ namespace Bamboo.WebApplication.Controllers
         [HttpGet]
         public IEnumerable<string> Get()
         {
-            return new string[] { "value1", "value2" };
+            return new string[] { "Welcome to Azure and asp.net core 2.0 web api with angular 4 template", "By Sts team" };
         }
 
         // GET api/values/5

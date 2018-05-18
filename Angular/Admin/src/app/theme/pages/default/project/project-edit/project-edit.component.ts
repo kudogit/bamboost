@@ -37,6 +37,10 @@ export class ProjectEditComponent implements OnInit {
         });
     }
 
+    public resetForm(){
+        
+    }
+
     save() {
         if (!this.projectForm.valid)
             return;
